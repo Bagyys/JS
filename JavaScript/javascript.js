@@ -89,3 +89,33 @@ console.log(vaisiai.entries(2,4)) //aray Methonds
 for(i=0; i< vaisiai.length; i++){
     console.log(vaisiai[i]);
 }
+
+/* end */
+
+function prekesKaina( kaina, prekes){
+    console.log(kaina, 'prekes kaina'),
+    console.log(prekes, "prekes pavadinimas")
+}
+prekesKaina(2, "kibinas");
+prekesKaina(4, "Kiauliena");
+prekesKaina(1, "ledai");
+
+/* uzduotis */
+
+var element = document.createElement("div");
+element.setAttribute("id", "moku" );
+
+var tekstas = document.getElementById("moku");
+var newElement = document.createElement("h1");
+var valio = document.createTextNode("Valio pavyko");
+
+var mouseover1 = document.getElementById("moku");
+mouseover1.addEventListener("mouseover", function(e){
+    e.target.style.color = "green";
+})
+function(e);
+newElement.appendChild(valio);
+element.appendChild(newElement)
+
+console.log(newElement," start")
+console.log(element)
