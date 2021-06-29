@@ -225,16 +225,94 @@ function preke (kaina, kiekis, pavadinimas){
 }
 preke(2,5, "Bananas");
 console.log(x);
+/* uzduotis 5 */
+
+
 
 const herojai = ["betmenas", "supermeneas", " zmogusVoras", " zmogusAmerika", "halkas"];
 
-console.log(herojai);
-
 herojai.forEach(function(zmones){
-    console.log(zmones);
+    console.log(herojai)
 });
 
 var naujas = document.createElement('div');
 naujas.setAttribute("id", " naujas");
-naujas.appendChild(herojai);
+naujas.innerHTML = (herojai);
+console.log(herojai)
+document.body.appendChild(naujas);
 console.log(naujas);
+
+herojai.forEach(function g(item, index){
+    if(index % 2 === 0){
+        '<p class="asd">'+item+'</p>'
+    } else {
+        '<p class="dsa">'+item+'</p>'
+    }
+})
+console.log(herojai)
+console.log(herojai[1])
+// const myAwesomeArray1 = [5, 4, 3, 2, 1]
+
+// myAwesomeArray1.map(x => x * x)
+// console.log(myAwesomeArray1)
+
+// const myAwesomeArray = [1, 2, 3, 4, 5]
+// myAwesomeArray.forEach(x => x * x)
+// //>>>>>>>>>>>>>return value: undefined
+
+// myAwesomeArray.map(x => x * x)
+// //>>>>>>>>>>>>>return value: [1, 4, 9, 16, 25]
+// console.log(myAwesomeArray.map);
+
+// const myAwesomeArray5 = [1, 2, 3, 4, 5]
+
+// const startForEach = performance.now()
+// myAwesomeArray5.forEach(x => (x + x) * 10000000000)
+// const endForEach = performance.now()
+// console.log(`Speed [forEach]: ${endForEach - startForEach} miliseconds`)
+
+// const startMap = performance.now()
+// myAwesomeArray5.map(x => (x + x) * 10000000000)
+// const endMap = performance.now()
+// console.log(`Speed [map]: ${endMap - startMap} miliseconds`)
+
+var divas100 = document.createElement('div');
+divas100.className = "red blue";
+
+divas100.setAttribute("id","divas");
+console.log(divas100)
+document.body.appendChild(divas100)
+
+// const p =
+// document.getElementById("divas").background = "red"; 
+// document.getElementById("divas").color = "seagreen"; 
+
+const s = 
+document.querySelector('.red').style.background = "yellow";
+document.querySelector('.red').style.color = "seagreen";
+document.querySelector('.red').style.width = "300px";
+document.querySelector('.red').style.height = "300px";
+const b = 
+
+document.querySelector('.blue').style.color = "black";
+document.querySelector('.blue').style.width = "300px";
+document.querySelector('.blue').style.height = "300px";
+console.log(divas100)
+
+var out = "";
+var getSpan = function (i) {
+    return [
+        '<span class="', (i % 2 === 0 ? 'red' : 'blue'), '">', i, '</span>'
+    ].join('');
+}
+
+for (var i = 1, l = 100; i <= l; i++) {
+    if (i % 10 === 0) {
+        out += getSpan(i) + '<br/>';
+    } else {
+        out += getSpan(i) + '&nbsp;';
+        if (i <= 10) out += '&nbsp;&nbsp;';
+    }
+}
+divas100.insertAdjacentHTML('beforeEnd', out);
+console.log(out)
