@@ -231,8 +231,8 @@ console.log(x);
 
 const herojai = ["betmenas", "supermeneas", " zmogusVoras", " zmogusAmerika", "halkas"];
 
-herojai.forEach(function(zmones){
-    console.log(herojai)
+herojai.forEach(function(zmones, index){
+    console.log(zmones)
 });
 
 var naujas = document.createElement('div');
@@ -242,15 +242,7 @@ console.log(herojai)
 document.body.appendChild(naujas);
 console.log(naujas);
 
-herojai.forEach(function g(item, index){
-    if(index % 2 === 0){
-        '<p class="asd">'+item+'</p>'
-    } else {
-        '<p class="dsa">'+item+'</p>'
-    }
-})
-console.log(herojai)
-console.log(herojai[1])
+
 // const myAwesomeArray1 = [5, 4, 3, 2, 1]
 
 // myAwesomeArray1.map(x => x * x)
@@ -277,42 +269,121 @@ console.log(herojai[1])
 // console.log(`Speed [map]: ${endMap - startMap} miliseconds`)
 
 var divas100 = document.createElement('div');
-divas100.className = "red blue";
-
+divas100.className = "red";
 divas100.setAttribute("id","divas");
-console.log(divas100)
 document.body.appendChild(divas100)
 
-// const p =
-// document.getElementById("divas").background = "red"; 
-// document.getElementById("divas").color = "seagreen"; 
+var divas2 = document.createElement("div");
+divas2.className = "blue";
+document.body.appendChild(divas2)
 
-const s = 
-document.querySelector('.red').style.background = "yellow";
-document.querySelector('.red').style.color = "seagreen";
-document.querySelector('.red').style.width = "300px";
-document.querySelector('.red').style.height = "300px";
-const b = 
 
-document.querySelector('.blue').style.color = "black";
-document.querySelector('.blue').style.width = "300px";
-document.querySelector('.blue').style.height = "300px";
+document.getElementById("divas").color = 'red'
+// document.querySelector('.blue').style.color = "blue";
+
+console.log(divas2)
 console.log(divas100)
 
-var out = "";
-var getSpan = function (i) {
+var result = document.getElementById('divas');
+var out = '';
+
+herojai.forEach = function (i) {
     return [
-        '<span class="', (i % 2 === 0 ? 'red' : 'blue'), '">', i, '</span>'
+        '<span id="', (i % 2 === 0 ? 'red' : 'blue'), '">', i, '</span>'
     ].join('');
 }
+console.log(herojai.forEach);
 
-for (var i = 1, l = 100; i <= l; i++) {
-    if (i % 10 === 0) {
-        out += getSpan(i) + '<br/>';
-    } else {
-        out += getSpan(i) + '&nbsp;';
-        if (i <= 10) out += '&nbsp;&nbsp;';
+result.insertAdjacentHTML('beforeEnd', out);
+console.log(result)
+
+
+const arrayTest = ["betmenas", "supermeneas", " zmogusVoras", " zmogusAmerika", "halkas"];
+
+var color = 
+
+arrayTest.forEach(index=>{
+    if(index % 2 === 0){
+        return "<li>" + index + "</li>";
+    }else{
+        console.log(arrayTest);
     }
+})
+
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+// Iterate over fruits below
+fruits.forEach( fruit => {
+  let indefiniteArticle = '';
+  if (fruit[0] === 'a' || fruit[0] === 'e' || fruit[0] === 'i' || fruit[0] === 'o' || fruit[0] === 'u') {
+    indefiniteArticle = 'an';
+  } 
+  //else if (fruit[0] === 'h'&& fruit[1] ===) { }
+  else {
+    indefiniteArticle = 'a';
+  }
+  console.log(`I want to eat ${indefiniteArticle} ${fruit}`);
+});
+
+var ppp = [1,2,3,4,5]
+function print(val,index){
+    console.log(`ppp[${index}] = ${val}`);
 }
-divas100.insertAdjacentHTML('beforeEnd', out);
-console.log(out)
+ppp.forEach(print);
+
+let students = ['John', 'Sara', 'Jack'];
+
+// using forEach
+students.forEach(myFunction);
+
+function myFunction(item, index, arr) {
+
+    // adding strings to the array elements
+    
+}
+
+console.log(students);
+
+var arrayExample = ["apple", "orange", "pear"];
+arrayExample.forEach(main);
+function main(arrayItem, index, array) {
+    var spanObj = "<span>" + arrayItem + "</span>"
+    var divObj = document.createElement('div');
+    divObj.innerHTML = spanObj;
+
+    // Do something like:
+    document.body.appendChild(divObj);
+
+    // Replace old array string with new array string wrapped in <span>
+    arrayExample[index] = spanObj
+   
+}
+console.log(arrayExample) // will output your new Array 
+
+
+var herojai2 = ['betmenas', 'zmogusVoras', 'spiderman','halk','joker'];
+console.log(herojai2)
+herojai2.forEach(left);
+function left (hero,index){
+    var spanO = "<span class ='colors'>" + hero + "</span>"
+    var divo = document.createElement('div');
+    divo.innerHTML = spanO;
+    document.body.appendChild(divo);
+    herojai2[index] = spanO;
+    
+    console.log(spanO)    
+}
+
+console.log(herojai2)
+
+function listColor() {
+    console.log('issaukiau');
+    var list = document.getElementsByTagName('span');
+  
+    for (var i = 0, l = list.length; i < l; i += 2) {
+      list[i + 1].style.color = 'red';
+      console.log(list)
+    }
+  };
+  listColor();
+
